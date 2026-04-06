@@ -4,6 +4,7 @@
   --color-brand-teal: #1A6B6B;
   --color-brand-teal-dark: #145858;
   --color-brand-coral: #E87461;
+  --color-brand-coral-dark: #d4614f;
   --color-brand-sage: #A8C5A0;
   --color-brand-cream: #FDF6EE;
   --color-brand-charcoal: #2D2D2D;
@@ -23,4 +24,32 @@ body {
   background-color: var(--color-brand-cream);
   color: var(--color-brand-charcoal);
   font-family: var(--font-body);
+}
+
+/* Fade-in-up animation for scroll reveals */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.7s ease-out both;
+}
+
+/* Stagger delays */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+
+/* Subtle shimmer for the trust bar */
+@keyframes shimmer {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
 }
